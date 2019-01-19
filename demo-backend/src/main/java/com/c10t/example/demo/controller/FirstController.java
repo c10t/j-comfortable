@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FirstController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "<h1>Foo</h2>";
-    }
+  @RequestMapping("/")
+  public String index() {
+    return "<h1>Foo</h2>";
+  }
 
-    @RequestMapping("/articles/{id}")
-    public Article getArticleById(@PathVariable long id) {
-        return Article.builder().id(id).title("Sample Title").build();
-    }
+  @RequestMapping("/articles/{id}")
+  public Article getArticleById(@PathVariable long id) {
+    return Article.builder().id(id).title("Sample Title").build();
+  }
 }
